@@ -1,0 +1,89 @@
+/* App.css */
+:root {
+  --primary-color: #ff6b6b;
+  --secondary-color: #4ecdc4;
+  --accent-color: #ffe66d;
+  --background-color: #f7f9fc;
+  --text-color: #2d3436;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px 0;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.main {
+  flex: 1;
+}
+
+.links-section {
+  margin-bottom: 40px;
+}
+
+.coming-soon-section {
+  margin-bottom: 40px;
+}
+
+.coming-soon-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+  font-size: 1.8rem;
+}
+
+.coming-soon-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .coming-soon-cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .coming-soon-card {
+    flex: 1;
+    max-width: 280px;
+  }
+}

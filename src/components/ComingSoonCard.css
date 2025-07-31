@@ -1,0 +1,29 @@
+/* ComingSoonCard.css */
+.coming-soon-card {
+  background-color: #e9ecef;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+  transition: transform 0.3s ease;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+}
+
+.coming-soon-card:hover {
+  transform: translateY(-3px);
+}
+
+.coming-soon-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #6c757d;
+}
+
+.coming-soon-content p {
+  color: #adb5bd;
+  font-size: 0.9rem;
+}
