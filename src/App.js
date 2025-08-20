@@ -23,7 +23,7 @@ function App() {
       location: '横浜・あざみ野',
       description: 'レイエスフィエスタ2025のブース出店',
       isPast: false,
-      eventUrl: '#', // 体験会のURLは後日追加予定
+      eventUrl: null, // 体験会のURLは後日追加予定
       relatedLinks: [
         {
           title: 'レイエスフィエスタ2025公式サイト',
