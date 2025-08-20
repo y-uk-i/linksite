@@ -21,12 +21,30 @@ const ShopIcon = () => (
 );
 
 const NoteIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#41C9B4">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black">
     <path d="M18.7 3.3H5.3C4 3.3 3 4.3 3 5.6v12.8c0 1.3 1 2.3 2.3 2.3h13.4c1.3 0 2.3-1 2.3-2.3V5.6c0-1.3-1-2.3-2.3-2.3zm-6.7 12.8H7.6v-1.5h4.4v1.5zm4.4-3H7.6v-1.5h8.8v1.5zm0-3H7.6V8.6h8.8v1.5z"/>
   </svg>
 );
 
-function LinkCard({ title, url, icon, isPR }) {
+const PortfolioIcon = () => (
+  <div style={{width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', borderRadius: '50%', border: '2px solid #e0e0e0'}}>
+    <span style={{fontSize: '20px'}}>ポ</span>
+  </div>
+);
+
+const CertificateIcon = () => (
+  <div style={{width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+    <span role="img" aria-label="certificate" style={{fontSize: '24px'}}>🎓</span>
+  </div>
+);
+
+const FinanceIcon = () => (
+  <div style={{width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+    <span role="img" aria-label="finance" style={{fontSize: '24px'}}>💹</span>
+  </div>
+);
+
+function LinkCard({ title, url, icon, isPR, comingSoon }) {
   const getIcon = () => {
     switch (icon) {
       case 'x':
@@ -37,6 +55,12 @@ function LinkCard({ title, url, icon, isPR }) {
         return <ShopIcon />;
       case 'note':
         return <NoteIcon />;
+      case 'portfolio':
+        return <PortfolioIcon />;
+      case 'certificate':
+        return <CertificateIcon />;
+      case 'finance':
+        return <FinanceIcon />;
       default:
         return null;
     }
@@ -45,9 +69,10 @@ function LinkCard({ title, url, icon, isPR }) {
   return (
     <a 
       href={url} 
-      target="_blank" 
+      target={comingSoon || icon === 'portfolio' ? "_self" : "_blank"} 
       rel="noopener noreferrer" 
-      className={`link-card ${isPR ? 'pr-card' : ''}`}
+      className={`link-card ${isPR ? 'pr-card' : ''} ${comingSoon ? 'coming-soon-card' : ''} ${icon === 'portfolio' ? 'portfolio-card' : ''}`}
+      onClick={comingSoon ? (e) => e.preventDefault() : undefined}
     >
       <div className="card-icon">
         {getIcon()}
@@ -55,6 +80,7 @@ function LinkCard({ title, url, icon, isPR }) {
       <div className="card-content">
         {isPR && <span className="pr-label">【PR】</span>}
         <h3>{title}</h3>
+        {comingSoon && <p className="coming-soon-notice">Coming Soon...</p>}
         {isPR && <p className="affiliate-notice">※アフィリエイトリンクを含みます</p>}
       </div>
     </a>

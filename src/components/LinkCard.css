@@ -76,6 +76,68 @@
 }
 
 .link-card:nth-child(3) .card-icon {
+  background-color: white;
+  color: black;
+  border: 1px solid #000;
+}
+
+.link-card:nth-child(4) .card-icon {
+  background-color: white;
+  color: var(--text-color);
+}
+
+/* ポートフォリオカードのスタイル */
+.portfolio-card {
+  background-color: white !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  opacity: 1 !important;
+  max-width: none !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  text-align: left !important;
+  height: 90px !important; /* XやYouTubeのカードと同じ高さに */
+}
+
+.portfolio-card .card-content {
+  text-align: left !important;
+}
+
+.portfolio-card .card-content h3 {
+  text-align: left !important;
+}
+
+.portfolio-card .coming-soon-notice {
+  text-align: left !important;
+}
+
+.link-card:nth-child(5) .card-icon {
   background-color: var(--accent-color);
   color: var(--text-color);
+}
+
+/* Coming Soon Card Styles */
+.coming-soon-card {
+  cursor: default;
+  opacity: 1 !important;
+  background-color: white !important;
+  position: relative;
+}
+
+.coming-soon-card:hover {
+  transform: none !important;
+  box-shadow: var(--card-shadow) !important;
+}
+
+.coming-soon-card::before {
+  content: none !important;
+}
+
+.coming-soon-notice {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  font-style: italic;
+  margin-top: 5px;
 }
