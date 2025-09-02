@@ -8,15 +8,6 @@ import EventCard from './components/EventCard';
 function App() {
   const events = [
     {
-      id: 1,
-      title: 'CNPトレカ交流会in東京・蒲田',
-      date: '2025年8月10日(日)',
-      location: '東京・蒲田',
-      description: '参加人数：9名',
-      isPast: true,
-      eventUrl: null
-    },
-    {
       id: 2,
       title: 'CNPトレカ体験会in横浜・あざみ野',
       date: '2025年9月23日(火・祝)',
@@ -30,6 +21,15 @@ function App() {
           url: 'https://www.tokyu-sports.com/football/reyes/news_list/event/2025_year/Reyes_Fiesta2025.html'
         }
       ]
+    },
+    {
+      id: 1,
+      title: 'CNPトレカ交流会in東京・蒲田',
+      date: '2025年8月10日(日)',
+      location: '東京・蒲田',
+      description: '参加人数：9名',
+      isPast: true,
+      eventUrl: null
     }
   ];
 
