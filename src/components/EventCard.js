@@ -11,7 +11,12 @@ function EventCard({ title, date, location, description, isPast, eventUrl, relat
       <div className="event-details">
         <p className="event-date"><strong>日時:</strong> {date}</p>
         <p className="event-location"><strong>場所:</strong> {location}</p>
-        {description && <p className="event-description">{description}</p>}
+        {description && <p className="event-description">{description.split('\n').map((text, i) => (
+          <React.Fragment key={i}>
+            {text}
+            {i < description.split('\n').length - 1 && <br />}
+          </React.Fragment>
+        ))}</p>}
         
         {eventUrl && (
           <div className="event-link-container">

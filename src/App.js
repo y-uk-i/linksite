@@ -21,7 +21,7 @@ function App() {
       title: 'CNPトレカ体験会in横浜・あざみ野',
       date: '2025年9月23日(火・祝)',
       location: '横浜・あざみ野',
-      description: 'レイエスフィエスタ2025のブース出店\n\n体験延べ人数：30名超',
+      description: 'レイエスフィエスタ2025のブース出店\n体験延べ人数：30名超',
       isPast: true,
       eventUrl: null, // 体験会のURLは後日追加予定
       relatedLinks: [
