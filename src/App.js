@@ -13,7 +13,7 @@ function App() {
       date: '2025年9月23日(火・祝)',
       location: '横浜・あざみ野',
       description: 'レイエスフィエスタ2025のブース出店',
-      isPast: false,
+      isPast: true,
       eventUrl: null, // 体験会のURLは後日追加予定
       relatedLinks: [
         {
@@ -50,13 +50,29 @@ function App() {
     },
     {
       id: 3,
-      title: 'noteで記事を読む',
+      title: 'note：経理、ISTJ、CNPトレカ…',
       url: 'https://note.com/_y_u_ki_yu_k_i_',
       icon: 'note',
       isPR: false
     },
     {
       id: 4,
+      title: 'note：政治や社会について',
+      url: 'https://note.com/yuki_thinks',
+      icon: 'note',
+      isPR: false
+    },
+    {
+      id: 5,
+      title: 'AI音声「Yuki」',
+      url: 'https://elevenlabs.io/app/voice-lab/share/c5112d7944ed82fbad0cd72f9629feff9a586377abcfde1496a247a1ea86d4fa/o9LUwv6JgbYpDvUZ1W1f',
+      icon: 'voice',
+      isPR: false,
+      description: '低めで穏やかな女性のAI音声「Yuki」。  \n実際に聴いてみて、動画や教材にぜひご活用ください。',
+      buttonText: 'AI音声を体験・活用する'
+    },
+    {
+      id: 6,
       title: 'ポートフォリオサイト',
       url: '#', // リンク無効化
       icon: 'portfolio',
@@ -64,7 +80,7 @@ function App() {
       comingSoon: true // Coming Soon表示用フラグ
     },
     {
-      id: 5,
+      id: 7,
       title: 'CNPトレカ公式ショップはこちら',
       url: 'https://shopa.jp/P6EMG66CZ9JF',
       icon: 'shop',
@@ -95,6 +111,8 @@ function App() {
               icon={link.icon}
               isPR={link.isPR}
               comingSoon={link.comingSoon}
+              description={link.description}
+              buttonText={link.buttonText}
             />
           ))}
         </section>
